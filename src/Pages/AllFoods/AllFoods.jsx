@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AllFoodsCard from "./AllFoodsCard";
 import { useLoaderData } from "react-router-dom";
+import './AllFoods.css'
 
 const AllFoods = () => {
     const [allFoods, setAllFoods] = useState([]);
@@ -30,7 +31,7 @@ const AllFoods = () => {
                 {
                     pages.map(page => <button 
                         onClick={() => setCurrentPage(page)}
-                        className="btn ml-3" key={page}>{page}</button>)
+                        className={`btn ml-3 ${page === currentPage ? "selected-button" : ""}`} key={page}>{page}</button>)
                 }
             </div>
         </div>

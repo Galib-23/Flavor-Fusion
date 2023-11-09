@@ -11,6 +11,7 @@ import MyCart from "../Shared/Dropdown/MyCart";
 import AddFood from "../Shared/Dropdown/AddFood";
 import MyAddedFoods from "../Shared/Dropdown/MyAddedFoods";
 import UpdateFood from "../Shared/Dropdown/Update/UpdateFood";
+import Blog from "../Pages/Blog";
 const router = createBrowserRouter([
     {
         path: '/',
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
               path:'/update/:id',
               element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
               loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             }
         ]
     }

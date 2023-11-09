@@ -9,9 +9,9 @@ const AllFoodsCard = ({food}) => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{food_name}</h2>
-                <p>{food_category}</p>
-                <p className="text-cyan-500">{food_quantity}</p>
-                <p>{price}</p>
+                <p>Foode Category: {food_category}</p>
+                <p className="text-cyan-500">Available Qty: {food_quantity}</p>
+                <p>Price: {price}</p>
                 <div className="card-actions">
                     <Link to={`/fooddetails/${_id}`}><button className="btn btn-primary">Details</button></Link>
                 </div>

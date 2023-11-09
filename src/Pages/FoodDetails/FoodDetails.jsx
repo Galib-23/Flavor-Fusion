@@ -5,7 +5,7 @@ const FoodDetails = () => {
     const {_id, food_name, food_image, food_category, price, food_origin, description} = food;
     return (
         <div className="flex flex-col items-center justify-center gap-2">
-            <img className="h-96 rounded-xl" src={food_image} alt="" />
+            <img className="h-40 md:h-96 rounded-xl" src={food_image} alt="" />
             <h2 className="text-4xl text-yellow-400 font-extrabold">{food_name}</h2>
             <p className="text-2xl text-yellow-600 font-bold">food_category</p>
             <p>Category: {food_category}</p>

@@ -22,6 +22,7 @@ const AllFoods = () => {
     }, [currentPage, itemPerPage])
     return (
         <div>
+            <h2 className="text-4xl text-center font-extrabold text-yellow-400 mb-5 mt-6">All Foods</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {
                     allFoods?.map(food => <AllFoodsCard key={food._id} food={food}></AllFoodsCard>)

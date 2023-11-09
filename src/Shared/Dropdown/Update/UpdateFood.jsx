@@ -39,6 +39,7 @@ const UpdateFood = () => {
     }
     return (
         <div>
+            <h2 className="text-4xl text-center font-extrabold text-yellow-400 mb-5 mt-6">Update Food</h2>
             <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="form-control">

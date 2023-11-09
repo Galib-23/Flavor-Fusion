@@ -11,7 +11,7 @@ const FoodPurchase = () => {
     const { food_name, price, food_quantity } = food;
     const [dbUsers, setDbUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://flavor-fusion-server-two.vercel.app/users')
             .then(res => res.json())
             .then(data => {
                 setDbUsers(data);
@@ -64,7 +64,7 @@ const FoodPurchase = () => {
               });
         }
         else{
-            fetch('http://localhost:5000/carts' , {
+            fetch('https://flavor-fusion-server-two.vercel.app/carts' , {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -19,7 +19,7 @@ const AddFood = () => {
         const count = 0;
         const myFood = {food_name, food_image, food_category, food_quantity, price, add_by, food_origin, description, count};
         console.log(myFood);
-        fetch('http://localhost:5000/foods',{
+        fetch('https://flavor-fusion-server-two.vercel.app/foods',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -5,7 +5,7 @@ const MyCart = () => {
     const { user } = useContext(AuthContext);
     const [cart, setCart] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/carts', { credentials: 'include' })
+        fetch('https://flavor-fusion-server-two.vercel.app/carts', { credentials: 'include' })
             .then(res => res.json())
             .then(data => {
                 setCart(data);

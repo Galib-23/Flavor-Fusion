@@ -16,7 +16,7 @@ const Register = () => {
         const newUser = {name, email, photo};
         console.log(newUser);
 
-        fetch('http://localhost:5000/users',{
+        fetch('https://flavor-fusion-server-two.vercel.app/users',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

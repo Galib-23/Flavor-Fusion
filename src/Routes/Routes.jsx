@@ -32,17 +32,17 @@ const router = createBrowserRouter([
             {
                 path: '/allfoods',
                 element: <AllFoods></AllFoods>,
-                loader: () => fetch('http://localhost:5000/foodsCount')
+                loader: () => fetch('https://flavor-fusion-server-two.vercel.app/foodsCount')
             },
             {
                 path: '/fooddetails/:id',
                 element: <FoodDetails></FoodDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({params}) => fetch(`https://flavor-fusion-server-two.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/foodpurchase/:id',
                 element: <PrivateRoute><FoodPurchase></FoodPurchase></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({params}) => fetch(`https://flavor-fusion-server-two.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/mycart',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
             {
               path:'/update/:id',
               element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
-              loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+              loader: ({params}) => fetch(`https://flavor-fusion-server-two.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/blog',

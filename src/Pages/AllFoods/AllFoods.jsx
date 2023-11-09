@@ -14,7 +14,7 @@ const AllFoods = () => {
         pages.push(i);
     }
     useEffect(() => {
-        fetch(`http://localhost:5000/all-foods?page=${currentPage}&size=${itemPerPage}`)
+        fetch(`https://flavor-fusion-server-two.vercel.app/all-foods?page=${currentPage}&size=${itemPerPage}`)
         .then(res => res.json())
         .then(data => {
             setAllFoods(data);

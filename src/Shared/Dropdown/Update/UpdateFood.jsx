@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const UpdateFood = () => {
     const food = useLoaderData();
-    const {_id, food_name, food_image, food_category, food_quantity, price, add_by, food_origin, description, count} = food;
+    const {_id, food_name, food_image, food_category, food_quantity, price, add_by, food_origin, description} = food;
     const handleSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -16,7 +16,7 @@ const UpdateFood = () => {
         const description = form.description.value;
         const count = 0;
         const updatedFood = {food_name, food_image, food_category, food_quantity, price, add_by, food_origin, description, count};
-        fetch(`http://localhost:5000/foods/${_id}`, {
+        fetch(`https://flavor-fusion-server-two.vercel.app/foods/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

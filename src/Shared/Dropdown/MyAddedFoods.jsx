@@ -8,7 +8,7 @@ const MyAddedFoods = () => {
     console.log('current mail : ', currentMail);
     const [allFoods, setAllFoods] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/all-foods')
+        fetch('https://flavor-fusion-server-two.vercel.app/all-foods')
             .then(res => res.json())
             .then(data => {
                 setAllFoods(data);

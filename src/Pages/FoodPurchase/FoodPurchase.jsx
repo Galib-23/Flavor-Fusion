@@ -56,7 +56,7 @@ const FoodPurchase = () => {
         const date = form.date.value;
         const quantity = form.quantity.value;
         const cart = {namee, emaill, date, food_name, price, quantity};
-        if(quantity > food_quantity){
+        if(quantity > food_quantity || food_quantity==0){
            return Swal.fire({
                 icon: 'error',
                 title: 'Cannot buy greater than qty!',

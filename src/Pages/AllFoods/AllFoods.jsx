@@ -13,17 +13,17 @@ const AllFoods = () => {
         pages.push(i);
     }
     useEffect(() => {
-        fetch('http://localhost:5000/all-foods')
+        fetch(`http://localhost:5000/all-foods?page=${currentPage}&size=${itemPerPage}`)
         .then(res => res.json())
         .then(data => {
             setAllFoods(data);
         })
-    }, [])
+    }, [currentPage, itemPerPage])
     return (
         <div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {
-                    allFoods.map(food => <AllFoodsCard key={food._id} food={food}></AllFoodsCard>)
+                    allFoods?.map(food => <AllFoodsCard key={food._id} food={food}></AllFoodsCard>)
                 }
             </div>
             <div className="flex items-center justify-center mt-5">

@@ -54,8 +54,17 @@ const FoodPurchase = () => {
         e.preventDefault();
         const form = e.target;
         const date = form.date.value;
-        const cart = {namee, emaill, date, food_name, price, food_quantity};
-        fetch('http://localhost:5000/carts' , {
+        const quantity = form.quantity.value;
+        const cart = {namee, emaill, date, food_name, price, quantity};
+        if(quantity > food_quantity){
+           return Swal.fire({
+                icon: 'error',
+                title: 'Cannot buy greater than qty!',
+                text: `An Error Occurred !`
+              });
+        }
+        else{
+            fetch('http://localhost:5000/carts' , {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -83,6 +92,7 @@ const FoodPurchase = () => {
                 text: `An Error Occurred !`
               })
         })
+        }
     }
 
     return (
@@ -118,7 +128,7 @@ const FoodPurchase = () => {
                         </label>
                         <label className="input-group">
                             <input type="text" placeholder="Quantity"
-                                name='description'
+                                name='quantity'
                                 defaultValue={food_quantity}
                                 className="input input-bordered w-full" />
                         </label>

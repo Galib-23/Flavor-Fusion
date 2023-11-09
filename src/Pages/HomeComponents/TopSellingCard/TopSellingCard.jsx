@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 
 const TopSellingCard = ({food}) => {
-    const{food_name, food_image, food_category, price} = food;
+    const{_id, food_name, food_image, food_category, price} = food;
     return (
         <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10 ">
@@ -11,7 +12,7 @@ const TopSellingCard = ({food}) => {
                 <p>{food_category}</p>
                 <p>{price}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Details</button>
+                <Link to={`/fooddetails/${_id}`}><button className="btn btn-primary">Details</button></Link>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ const MyCart = () => {
     const {user} = useContext(AuthContext);
     const [cart, setCart] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/carts')
+        fetch('http://localhost:5000/carts', {credentials: 'include'})
             .then(res => res.json())
             .then(data => {
                 setCart(data);

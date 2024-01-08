@@ -22,8 +22,8 @@ const Reviews = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Timely Delivery</h2>
+                        <p>The behaviors of the Delivery boys are very outstanding and they maintain the time very efficiently.</p>
                     </div>
                 </div>
                 {/* ---card--- */}
@@ -41,8 +41,8 @@ const Reviews = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Great Quality Food</h2>
+                        <p>The food that I have recieved from flavor fusion are just out of the world.</p>
                     </div>
                 </div>
                 {/* ---card--- */}
@@ -60,8 +60,8 @@ const Reviews = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">User Friendly Interface</h2>
+                        <p>I have seen other food service websites but those were not as user friendly as flavor fusion.</p>
                     </div>
                 </div>
                 {/* ---card--- */}
@@ -79,8 +79,8 @@ const Reviews = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Awsome Customer Support</h2>
+                        <p>I have never been disappointed calling their customer care . They all are very helpful and always dedicated.</p>
                     </div>
                 </div>
             </div>
